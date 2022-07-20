@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="391.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursinis_java.fxControllers.NewCourseWindow">
+   <children>
+      <TextField fx:id="titleField" layoutX="104.0" layoutY="44.0" />
+      <DatePicker fx:id="startDatePicker" layoutX="19.0" layoutY="293.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="createButton" layoutX="57.0" layoutY="347.0" mnemonicParsing="false" onAction="#createCourse" text="Create" />
+      <Button layoutX="227.0" layoutY="347.0" mnemonicParsing="false" onAction="#returnToMain" text="Cancel" />
+      <Text layoutX="45.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title:" />
+      <Text layoutX="26.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" />
+      <DatePicker fx:id="endDatePicker" layoutX="194.0" layoutY="294.0" prefHeight="25.0" prefWidth="149.0" />
+      <Text layoutX="68.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start date:" />
+      <Text layoutX="244.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End date:" />
+      <TextArea fx:id="descriptionField" layoutX="104.0" layoutY="106.0" prefHeight="146.0" prefWidth="149.0" />
+      <Button fx:id="updateButton" layoutX="55.0" layoutY="347.0" mnemonicParsing="false" onAction="#updateCourse" text="Update" />
+   </children>
+</AnchorPane>

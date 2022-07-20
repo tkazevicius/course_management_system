@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="215.0" prefWidth="260.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursinis_java.fxControllers.NewFolderWindow">
+   <children>
+      <TextField fx:id="folderTitleField" layoutX="80.0" layoutY="32.0" />
+      <Text layoutX="42.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title:" />
+      <ComboBox fx:id="responsiblePerson" layoutX="86.0" layoutY="104.0" prefWidth="150.0" />
+      <Text fx:id="responsibleTextField" layoutX="14.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Responsible:" />
+      <Button fx:id="createFolderButton" layoutX="42.0" layoutY="166.0" mnemonicParsing="false" onAction="#createFolder" text="Create" />
+      <Button layoutX="177.0" layoutY="166.0" mnemonicParsing="false" onAction="#returnToMain" text="Cancel" />
+      <Button fx:id="updateFolderButton" layoutX="39.0" layoutY="166.0" mnemonicParsing="false" onAction="#updateFolder" text="Update" />
+   </children>
+</AnchorPane>

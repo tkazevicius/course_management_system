@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="446.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursinis_java.fxControllers.MainCourseWindow">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Courses">
+            <items>
+              <MenuItem fx:id="editCourseButton" mnemonicParsing="false" onAction="#editSelected" text="Edit" />
+                  <MenuItem fx:id="deleteCourseButton" mnemonicParsing="false" onAction="#deleteSelected" text="Delete" />
+                  <MenuItem fx:id="allCourses" mnemonicParsing="false" onAction="#goToAllCourses" text="All courses" />
+            </items>
+          </Menu>
+          <Menu fx:id="UsersButton" mnemonicParsing="false" text="Users">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#goToAllUsers" text="All users" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ListView fx:id="myEnrolledCoursesList" layoutX="28.0" layoutY="63.0" onMouseClicked="#loadFolders" prefHeight="328.0" prefWidth="200.0" />
+      <Button fx:id="createCourseButton" layoutX="83.0" layoutY="406.0" mnemonicParsing="false" onAction="#createCourse" text="Create course" />
+      <TreeView fx:id="courseFolders" layoutX="340.0" layoutY="63.0" prefHeight="328.0" prefWidth="200.0">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="addNewFolderButton" mnemonicParsing="false" onAction="#addFolder" text="Add new folder" />
+                  <MenuItem fx:id="editFolderButton" mnemonicParsing="false" onAction="#editFolder" text="Edit folder" />
+                  <MenuItem fx:id="deleteFolderButton" mnemonicParsing="false" onAction="#deleteFolder" text="Delete Folder" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TreeView>
+      <Text layoutX="28.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My registered courses" />
+      <Text layoutX="340.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course folders" />
+      <Button layoutX="373.0" layoutY="406.0" mnemonicParsing="false" onAction="#checkFolderInformation" text="Check folder information" />
+   </children>
+</AnchorPane>
